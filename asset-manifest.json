@@ -1,16 +1,18 @@
 {
   "files": {
-    "main.css": "/airepairnyc/static/css/main.f855e6bc.css",
-    "main.js": "/airepairnyc/static/js/main.af01c373.js",
+    "main.css": "/airepairnyc/static/css/main.b4e0bf70.css",
+    "main.js": "/airepairnyc/static/js/main.94c59fbf.js",
     "static/js/453.89eefeb1.chunk.js": "/airepairnyc/static/js/453.89eefeb1.chunk.js",
-    "static/media/logo.svg": "/airepairnyc/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/airepair_logo.png": "/airepairnyc/static/media/airepair_logo.53fd5f83e5371864b866.png",
+    "static/media/certified-by-epa.png": "/airepairnyc/static/media/certified-by-epa.45cc1691ab842ecfb826.png",
+    "static/media/ac-stockphoto.jpeg": "/airepairnyc/static/media/ac-stockphoto.5c245e6113ec33ed0923.jpeg",
     "index.html": "/airepairnyc/index.html",
-    "main.f855e6bc.css.map": "/airepairnyc/static/css/main.f855e6bc.css.map",
-    "main.af01c373.js.map": "/airepairnyc/static/js/main.af01c373.js.map",
+    "main.b4e0bf70.css.map": "/airepairnyc/static/css/main.b4e0bf70.css.map",
+    "main.94c59fbf.js.map": "/airepairnyc/static/js/main.94c59fbf.js.map",
     "453.89eefeb1.chunk.js.map": "/airepairnyc/static/js/453.89eefeb1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.af01c373.js"
+    "static/css/main.b4e0bf70.css",
+    "static/js/main.94c59fbf.js"
   ]
 }
