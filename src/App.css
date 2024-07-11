@@ -1,3 +1,6 @@
+/*
+ style sheet for big image display
+ */
 .bigImgContainer {
   display: flex;
   justify-content: center;
@@ -21,6 +24,41 @@
 }
 
 .bigImgContainer p {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* 
+Code for the infoBoxContainer
+*/
+
+.infoBoxContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.infoBoxContainer div {
+  flex: 1;
+  background-color: #b8b8be8a;
+  margin: 20px;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.infoBoxContainer div h1 {
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.infoBoxContainer div p {
   color: rgb(0, 0, 0);
   font-size: 20px;
   font-weight: bold;
