@@ -2,7 +2,6 @@
  style sheet for big image display
  */
 .bigImgContainer {
-  display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
@@ -16,18 +15,11 @@
   opacity: 30%;
 }
 
-.bigImgContainer h1 {
-  color: rgb(0, 0, 0);
-  font-size: 50px;
-  font-weight: bold;
-  text-align: center;
-}
-
-.bigImgContainer p {
-  color: rgb(0, 0, 0);
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
+.bigImgContainer div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* 

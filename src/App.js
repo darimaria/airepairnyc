@@ -13,9 +13,9 @@ function App() {
       </div>
       <div className="bigImgContainer">
         <img src={stockphoto} alt="stockphoto"/>
-        <div style={{position:"absolute", top:"50%", left:"50%", transform:"translate(-50%,-50%"}}>
-          <h1>Your Manhattan AC Repairman</h1>
-          <p>For dependable, efficient, and professional service.</p>
+        <div>
+          <h1 style={{"font-size":"50px"}}>Your Manhattan AC Repair Man</h1>
+          <p style={{"font-size":"30px"}}>Choose Airepair for the best quality service on demand.</p>
         </div>
       </div>
       <div>
