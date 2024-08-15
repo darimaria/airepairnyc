@@ -25,6 +25,9 @@ function App() {
         </h1>
         <InformationBoxes />
       </div>
+      <div>
+        <h1 style={{margin:"50px"}}>24/7 Emergency Service</h1>
+      </div>
     </body>
   );
 }
