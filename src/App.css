@@ -1,58 +1,204 @@
 /*
- style sheet for big image display
+NAVIGATION BAR
+*/
+.original-nav {
+  position: relative;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  z-index: 100;
+}
+
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #444;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  z-index: 999;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-center {
+  padding: 10px;
+}
+
+.nav-toggle {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  padding: 10px;
+  background-color: rgba(238, 9, 9, 0.631);
+  border: none;
+  color: white;
+  font-size: 25px;
+  border-radius: 4px;
+  cursor: pointer
+}
+
+.links-container {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+}
+
+.links-container.show-links {
+  height: 36px;
+}
+
+.links {
+  list-style-type: none; /* Remove bullet points */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Align items horizontally */
+  justify-content: flex-end;
+}
+
+.links li {
+  margin-right: 20px; /* Space between links */
+}
+
+.links li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  padding: 8px 16px;
+  display: block;
+}
+
+.nav-item a:hover {
+  background-color: #bab4b493;
+  border-radius: 0px;
+}
+
+.logo {
+  height: 80px;
+}
+
+.links-container {
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+/*
+ BIG IMAGE DISPLAY
  */
 .bigImgContainer {
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
   background-color: rgba(131, 107, 107, 0.701);
+  overflow: hidden;
+  width: 100%;
+  height: 600px;
 }
 
 .bigImgContainer img {
-  flex-shrink:0;
   width: 100%;
-  height: 100%;
+  height: 600px;
   opacity: 30%;
+  object-fit: cover;
 }
 
-.bigImgContainer div {
+.container-content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+  z-index: 1;
+}
+
+/*
+PAGE CONTENT
+*/
+.section {
+  display: flex;
+  flex-direction: column; /* Stack title and description vertically */
+  align-items: center; /* Center horizontally */
+  text-align: center; /* Center text within the section */
+  height: auto;
+  /* min-height: 100vh; Optionally make the section fill the viewport height */
+}
+
+.section p {
+  font-size: 1.5em;
+  text-align: left;
+  margin: 20px;
+}
+
+.title {
+  font-size: 2em; /* Adjust as needed */
+  font-family: "Lato", sans-serif;
+  /* font-family: "Lucida Console", "Courier New", monospace; */
+  margin-top: 10px; /* Space between title and image */
+  margin-bottom: 10px; /* Space between title and description */
+  background-image: linear-gradient(to right, rgba(255, 0, 0, 0.81) , rgba(255, 0, 0, .75),rgba(49, 8, 255, 0.828));
+  width: 100%;
+  border-radius: 10px;
+}
+
+/*
+BUTTON STYLES
+*/
+.button-up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: rgba(238, 9, 9, 0.631);
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.button-up:hover {
+  background-color: rgba(238, 9, 9, 0.9);
 }
 
 /* 
-Code for the infoBoxContainer
+INFO BOX CONTAINER
 */
 
 .infoBoxContainer {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-left: 40px;
-  margin-right: 40px;
+  align-items: stretch;
+  width: 100%;
 }
 
 .infoBoxContainer div {
   flex: 1;
-  background-color: #b8b8be8a;
-  margin: 20px;
-  border-radius: 20px;
-  padding: 20px;
+  color: #b8b8be8a;
+  border-radius: 4px;
+  box-sizing: border-box; /* Ensure padding is included within height */
+  margin: 5px;
+}
+
+.infoBoxContainer div::before {
+  content: '';
+  position: absolute;
+  background-color: inherit;
+  z-index: -1;
+  border-radius: inherit;
 }
 
 .infoBoxContainer div h1 {
   color: rgb(0, 0, 0);
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bold;
-  text-align: center;
+  font-family: "Lato", sans-serif;
 }
 
-.infoBoxContainer div p {
+.infoBoxContainer ul li {
   color: rgb(0, 0, 0);
+  text-align: left;
+  margin-left: -2rem;
+  margin-bottom: 30px;
+  font-family: "Lato", sans-serif;
   font-size: 20px;
-  font-weight: bold;
-  text-align: center;
 }
