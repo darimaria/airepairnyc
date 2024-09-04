@@ -4,7 +4,6 @@ NAVIGATION BAR
 #nav {
   width: 100%;
   padding: 1rem 0; /* Removed horizontal padding */
-  /* background-color: #f8f9fa; Example background color */
   height: auto;
 }
 
@@ -38,30 +37,21 @@ NAVIGATION BAR
 /* Responsive Design */
 @media (max-width: 768px) {
   .nav-center {
-    flex-direction: column;
+    flex-direction: column; /* Stack logo and links vertically */
     align-items: flex-start; /* Align items to the start of the container */
     padding: 0 1rem;
   }
 
   .links ul {
-    flex-direction: column;
+    flex-direction: row;
     width: 100%; /* Make links take full width */
+    justify-content: flex-start; /* Align links to the left */
     margin-top: 1rem; /* Space between logo and links */
-  }
-
-  .links ul li {
-    width: 100%; /* Make each link take full width */
-  }
-
-  .links ul li a {
-    padding: 0.5rem 0;
-    width: 100%;
-    text-align: left; /* Align text to the left */
   }
 }
 
 .epa {
-  height: 90px;
+  width: 50px;
 }
 
 .logo {
