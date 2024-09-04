@@ -1,86 +1,71 @@
 /*
 NAVIGATION BAR
 */
-.original-nav {
-  position: relative;
-  background-color: #333;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  z-index: 100;
-}
-
-.fixed-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
+#nav {
   width: 100%;
-  background-color: #444;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  z-index: 999;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0; /* Removed horizontal padding */
+  /* background-color: #f8f9fa; Example background color */
+  height: auto;
 }
 
 .nav-center {
-  padding: 10px;
+  display: flex;
+  justify-content: space-between; /* Space between logo and links */
+  align-items: center;
+  max-width: 1170px;
+  margin: 0 auto; /* Center the container */
 }
 
-.nav-toggle {
-  position: absolute;
-  top: 30px;
-  right: 20px;
-  padding: 10px;
-  background-color: rgba(238, 9, 9, 0.631);
-  border: none;
-  color: white;
-  font-size: 25px;
-  border-radius: 4px;
-  cursor: pointer
-}
-
-.links-container {
-  height: 0;
-  overflow: hidden;
-  transition: height 0.3s ease-in-out;
-}
-
-.links-container.show-links {
-  height: 36px;
-}
-
-.links {
-  list-style-type: none; /* Remove bullet points */
-  margin: 0;
+.links ul {
+  list-style-type: none;
+  display: flex;
+  gap: 1.5rem; /* Space between links */
   padding: 0;
-  display: flex; /* Align items horizontally */
-  justify-content: flex-end;
+  justify-content: flex-end; /* Push ul to the right */
 }
 
-.links li {
-  margin-right: 20px; /* Space between links */
-}
-
-.links li a {
-  color: rgb(0, 0, 0);
+.links ul li a {
+  font-family: "Lato", sans-serif;
   text-decoration: none;
-  padding: 8px 16px;
-  display: block;
+  color: #333; /* Example text color */
+  font-weight: bold;
 }
 
-.nav-item a:hover {
-  background-color: #bab4b493;
-  border-radius: 0px;
+.links ul li a:hover {
+  color: #007bff; /* Example hover color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-center {
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start of the container */
+    padding: 0 1rem;
+  }
+
+  .links ul {
+    flex-direction: column;
+    width: 100%; /* Make links take full width */
+    margin-top: 1rem; /* Space between logo and links */
+  }
+
+  .links ul li {
+    width: 100%; /* Make each link take full width */
+  }
+
+  .links ul li a {
+    padding: 0.5rem 0;
+    width: 100%;
+    text-align: left; /* Align text to the left */
+  }
+}
+
+.epa {
+  height: 90px;
 }
 
 .logo {
-  height: 80px;
-}
-
-.links-container {
-  overflow: hidden;
-  transition: var(--transition);
+  height: 90px;
 }
 
 /*
@@ -88,15 +73,15 @@ NAVIGATION BAR
  */
 .bigImgContainer {
   overflow: hidden;
-  background-color: rgba(131, 107, 107, 0.701);
+  background-color: rgba(97, 79, 79, 0.701);
   overflow: hidden;
   width: 100%;
-  height: 600px;
+  height: 90vh;
 }
 
 .bigImgContainer img {
   width: 100%;
-  height: 600px;
+  height: 90vh;
   opacity: 30%;
   object-fit: cover;
 }
@@ -105,10 +90,34 @@ NAVIGATION BAR
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  color: rgb(0, 0, 0);
-  font-size: 2rem;
-  z-index: 1;
+  width: 70%;
+  max-width: 80%;
+  box-sizing: border-box;
+}
+
+.container-content h1 {
+  font-size: 5vw;
+  font-family: "Lato", sans-serif;
+  color: white;
+  width: 100%;
+}
+
+.container-content p {
+  font-size: 2vw;
+  font-family: "Lato", sans-serif;
+  color: white;
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+  .container-content h1 {
+    font-size: 4rem;
+  }
+
+  .container-content p {
+    font-size: 1.5rem;
+  }
 }
 
 /*
@@ -124,7 +133,6 @@ PAGE CONTENT
 }
 
 .section p {
-  font-size: 1.5em;
   text-align: left;
   margin: 20px;
 }
@@ -173,23 +181,16 @@ INFO BOX CONTAINER
 
 .infoBoxContainer div {
   flex: 1;
-  color: #b8b8be8a;
-  border-radius: 4px;
+  background-color: #ffffff;
+  border-radius: 8px;
   box-sizing: border-box; /* Ensure padding is included within height */
   margin: 5px;
-}
-
-.infoBoxContainer div::before {
-  content: '';
-  position: absolute;
-  background-color: inherit;
-  z-index: -1;
-  border-radius: inherit;
+  box-shadow: -5px -5px 5px rgba(0, 0, 0, 0.341);
 }
 
 .infoBoxContainer div h1 {
-  color: rgb(0, 0, 0);
-  font-size: 40px;
+  color: rgb(226, 70, 70);
+  font-size: 3vw;
   font-weight: bold;
   font-family: "Lato", sans-serif;
 }
@@ -200,5 +201,21 @@ INFO BOX CONTAINER
   margin-left: -2rem;
   margin-bottom: 30px;
   font-family: "Lato", sans-serif;
-  font-size: 20px;
+  font-size: 1.7vw;
+}
+
+@media (max-width: 400px) {
+  .infoBoxContainer div h1 {
+    font-size: 4rem;
+  }
+
+  .infoBoxContainer ul li {
+    font-size: 1.5rem;
+  }
+}
+
+.contact-us-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
