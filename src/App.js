@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import logo from './assets/images/airepair_logo.png';
-import stockphoto from './assets/images/ac-stockphoto.jpeg';
+import stockphoto from './assets/images/ac-stockphoto.jpg';
 import manhattan from './assets/images/manhattan2.jpg';
 import epa from './assets/images/certified-by-epa.png';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
